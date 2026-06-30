@@ -6,3 +6,6 @@ A few notes: DemonstrationInput.tex has the same output as Demonstration.tex, an
 All of these pictures have been created by me for coursework, demonstrations, and presentations. None of the above appear in published research, though some MAY appear within my PhD proposal/thesis. As such, if you're using the code as-is, kindly cite the repository.
 
 P.S. As much as I think these examples are good, I'm 1000% sure that many/all of these .tex files could be trimmed down, simplified, and possibly written better than how I did them (especially the TikZ ones). These examples do not constitute documentation-level examples in terms of code-cleanliness. Several have useless commented-out lines and packages unnecessarily carried over from older .tex files. I did not put in any effort into cleaning these files up, but they're still quite readable.
+
+Good documentation for pgfplots and tikz can be found in:
+[Overleaf’s documentation of TikZ](https://www.overleaf.com/learn/latex/TikZ_package) || [more comprehensive documentation of TikZ](https://tikz.dev/) || [Overleaf’s documentation of PGFPlots](https://www.overleaf.com/learn/latex/Pgfplots_package) || [more comprehensive documentation of PGFPlots.](https://tikz.dev/pgfplots/)
