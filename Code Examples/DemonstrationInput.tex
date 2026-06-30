@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+
+\begin{document}
+
+	\begin{tikzpicture}
+			\pgfplotstableread{data.csv}\loadedtable
+		\begin{axis}[
+			xmin=0, xmax=24,
+			ymin=20, ymax=24.5,
+			xtick={0,4,8,12,16,20,24},
+			/pgfplots/xmajorgrids=true,
+			/pgfplots/ymajorgrids=true,
+			grid style={opacity=0.5},
+			xlabel=time $(hr)$,
+			ylabel= Temperature $(^{\circ}C)$,
+			legend style={at={(0.6,0.9)}}
+			]
+			\addlegendentry{Zone Air}
+			\addplot[smooth,thick,blue] table [y=ZoneAirTemperature, x=Time,col sep=comma]{data.csv};
+			
+			\addlegendentry{Floor Temperature}
+				\addplot [smooth,thick,red] table [y=FloorTemperature, x=Time,col sep=comma]{data.csv};
+			%\node [draw] at (0,0) {max}
+		\end{axis}
+		\node [] at (5.4,5.5) {24.1}; %denoting highest point
+		\draw [->] (5.15,5.35) -- (4.8,5.15);
+	\end{tikzpicture}
+\end{document}
